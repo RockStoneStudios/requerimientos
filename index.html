@@ -1,0 +1,4830 @@
+<html xmlns:rem="http://rem.lsi.us.es">
+
+<head>
+
+<title>Proyecto Requerimientos</title>
+
+<style type="text/css">
+
+<!--
+
+            body {
+
+                font-family: arial,verdana;
+
+                font-size: 10pt;
+
+                text-align: justify
+
+            }
+
+
+
+            h1 { font-size: 14pt }
+
+            h2 { font-size: 13pt }
+
+            h3 { font-size: 12pt }
+
+            h4 { font-size: 11pt }
+
+            h5 { font-size: 10pt }
+
+            h6 { font-size: 10pt }
+
+
+
+            h1.cover { font-size: 20pt }
+
+
+
+            tr { font-size: 10pt }
+
+
+
+            table { border: black solid; }
+
+            table.TOC { border: none; }
+
+            ul {
+
+                margin-top:    0pt;
+
+                margin-bottom: 0pt;
+
+                margin-left:   12pt
+
+            }
+
+        -->
+
+</style>
+
+</head>
+
+<body>
+
+<center>
+
+<h3>Proyecto Requerimientos</h3>
+
+<p />
+
+<h1 class="cover">Documento de Requisitos del Sistema</h1>
+
+<p />
+
+<h3>Versi�n 1.1</h3>
+
+<h3>Fecha 26/06/2023</h3>
+
+<p />
+
+<h3>Preparado para:</h3>
+
+<a href="#ORG-0001" title="Camara de Comercio unido de Sopetran">
+
+<p>
+
+Camara de Comercio unido de Sopetran</p>
+
+</a>
+
+<p />
+
+<h3>Preparado por:</h3>
+
+<a href="#ORG-0002" title="RockStoneStudios (Freelance)">
+
+<p>
+
+RockStoneStudios (Freelance)</p>
+
+</a>
+
+<p />
+
+</center>
+
+<hr size="4" />
+
+<p />
+
+<h1 align="left">�ndice</h1>
+
+<p />
+
+<table border="0" width="100%" class="TOC">
+
+<tr>
+
+<th align="left" valign="top">1 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0001">
+
+Introduccion</a>
+
+</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">2 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0013">
+
+Proposito</a>
+
+</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">3 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0014">
+
+Ambito del Sistema</a>
+
+</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">4 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0015">
+
+Funciones del producto</a>
+
+</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">5 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0016">
+
+Restricciones</a>
+
+</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">6 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0002">
+
+GLOSARIO</a>
+
+</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">7 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0003">
+
+PARTICIPANTES DEL PROYECTO</a>
+
+</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">8 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0004">
+
+DESCRIPCION DEL SISTEMA ACTUAL</a>
+
+</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">9 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0005">
+
+OBJETIVOS</a>
+
+</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">10 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0006">
+
+CATALOGO DE REQUISITOS DEL SISTEMA</a>
+
+</th>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">10.1 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0007">
+
+Requisitos de almacenamiento de informacion</a>
+
+</td>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">10.2 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0008">
+
+Requisitos funcionales</a>
+
+</td>
+
+</tr>
+
+<tr><td /><td />
+
+<td albgn="left" valign="top">10.2.1 </td>
+
+<td align="left" valign="top" width="100%">
+
+<a href="#SEC-0009">
+
+Diagrama casos de uso</a>
+
+</td>
+
+</tr>
+
+<tr><td /><td />
+
+<td albgn="left" valign="top">10.2.2 </td>
+
+<td align="left" valign="top" width="100%">
+
+<a href="#SEC-0010">
+
+Definicion de actores</a>
+
+</td>
+
+</tr>
+
+<tr><td /><td />
+
+<td albgn="left" valign="top">10.2.3 </td>
+
+<td align="left" valign="top" width="100%">
+
+<a href="#SEC-0011">
+
+Casos de uso del sistema</a>
+
+</td>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">10.3 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0012">
+
+Requisitos no funcionales</a>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">11 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0017">
+
+Prototipos</a>
+
+</th>
+
+</tr>
+
+</table>
+
+<p />
+
+<hr size="4" />
+
+<p />
+
+<a name="SEC-0001" />
+
+<h1 align="left">1 
+
+Introduccion</h1><a name="PRG-0001" />
+
+<p>El presente documento tiene como objetivo presentar una descripci�n detallada de la aplicaci�n m�vil "SopeApp", dise�ada para ayudar a los turistas y habitantes del municipio de sopetran a tener en su bolsillo un directorio virtual donde estos puedan ver los productos y servicios con los que cuentas la gran diversidad de negocios con los que cuenta nuestro municipio. Esta app ha sido desarrollada para dispositivos iOS y Android, y busca brindar una experiencia intuitiva y personalizada 
+
+<br />
+
+<br />En esta introducci�n documental, se proporcionar� una visi�n general de las funcionalidades principales de la aplicaci�n, as� como de los requisitos t�cnicos necesarios para su instalaci�n y funcionamiento. Adem�s, se presentar�n los objetivos y beneficios clave de la aplicaci�n, junto con una descripci�n de su p�blico objetivo y el contexto en el que se espera que la app se utilice.
+
+<br />
+
+<br />los metodos esocogidos para levantar los requisitos de la app fue la entrevista y sesiones grupales con varios comerciantes para descubrir otras necesidades, Metodo que desarrolle principalmente   con la presidenta de la camara de comercio unido de sopetran la se�ora Sandra Rendon Bedoya , entre otros comerciantes los requisitos tomados en las entrevistas estan en los objetivos de este documento 
+
+<br />
+
+<br />A lo largo de este documento, se detallar�n los diferentes m�dulos y caracter�sticas de "SopeApp"</p>
+
+<a name="SEC-0013" />
+
+<h1 align="left">2 
+
+Proposito</h1><a name="PRG-0004" />
+
+<p>Este documentos tiene como prop�sito dar a conocer el funcionamiento general
+
+<br />del proyecto <a href="#GLO-0002" title="Aplicacion movil que contiene todos los establecimentos comerciales del muncipio de sopetr�n para una mayor apropiacion por parte de los turistas y habitantes del municipio de los servicios que este ofrece">SopeApp</a> (Directorio) que esta dirigido al equipo desarrollador,
+
+<br />a la empresa RockStone y al usuario final</p>
+
+<a name="SEC-0014" />
+
+<h1 align="left">3 
+
+Ambito del Sistema</h1><a name="PRG-0005" />
+
+<p>. Nombre del Sistema : <a href="#GLO-0002" title="Aplicacion movil que contiene todos los establecimentos comerciales del muncipio de sopetr�n para una mayor apropiacion por parte de los turistas y habitantes del municipio de los servicios que este ofrece">SopeApp</a>
+
+<br />. El sistema tendra todos los negocios y sus respectivos productos y     servicios que estos ofrecen ademas mostrara su numero     telefonico, whatsapp, ubicaci�n   etc . . . 
+
+<br />. Los principales beneficiados del sistema seran los turistas y     habitantes del municipio que tendran en su bolsillo lo que el      municipio  tiene para oferecer 
+
+<br />
+
+<br />
+
+<br />
+
+</p>
+
+<a name="SEC-0015" />
+
+<h1 align="left">4 
+
+Funciones del producto</h1><a name="PRG-0007" />
+
+<p>
+
+<br />. Registrar Usuarios para llevar un historial de compras y poder tener   promociones y regalos para ellos 
+
+<br />. Listar todos los negocios adscritos a la app 
+
+<br />. Ver un negocio en especifico con sus respectivos productos y     servicios que , asi como su ubicacion en google maps y numeros de   comunicacion telefonico y via whatsapp
+
+<br />. Carrito de compras con la funcionalidad de editar y eliminar   productos</p>
+
+<a name="SEC-0016" />
+
+<h1 align="left">5 
+
+Restricciones</h1><a name="PRG-0008" />
+
+<p>El generado  token de session se borrara cada 24 horas 
+
+<br />
+
+<br />El cliente no ha especificado ninguna otra limitante, y algunos de las caracter�sticas las  dej� al criterio de los desarrolladores.</p>
+
+<a name="SEC-0002" />
+
+<h1 align="left">6 
+
+GLOSARIO</h1><a name="GLO-0002" />
+
+<p align="left">
+
+<b> SopeApp:</b>Aplicacion movil que contiene todos los establecimentos comerciales del muncipio de sopetr�n para una mayor apropiacion por parte de los turistas y habitantes del municipio de los servicios que este ofrece</p>
+
+<a name="GLO-0006" />
+
+<p align="left">
+
+<b> DB:</b> Base de datos escogida para guardar informacion persistente 
+
+<br />
+
+<br />
+
+</p>
+
+<a name="SEC-0003" />
+
+<h1 align="left">7 
+
+PARTICIPANTES DEL PROYECTO</h1><a name="ORG-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">Organizaci�n</th>
+
+<th align="left" valign="top" width="100%">
+
+Camara de Comercio unido de Sopetran</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Direcci�n</th>
+
+<td align="left" valign="top" colspan="1">Parque principal</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Tel�fono</th>
+
+<td align="left" valign="top" colspan="1">3201232041</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fax</th>
+
+<td align="left" valign="top" colspan="1">
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="ORG-0002" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">Organizaci�n</th>
+
+<th align="left" valign="top" width="100%">
+
+RockStoneStudios (Freelance)</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Direcci�n</th>
+
+<td align="left" valign="top" colspan="1">Crr 65A #93-31</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Tel�fono</th>
+
+<td align="left" valign="top" colspan="1">3235812732</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fax</th>
+
+<td align="left" valign="top" colspan="1">
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="STK-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">Participante</th>
+
+<th align="left" valign="top" width="100%">
+
+Sandra Rendon</th>
+
+</tr>
+
+<tr><th align="left" valign="top">Organizaci�n</th>
+
+<td align="left" valign="top">
+
+<a href="#ORG-0001">
+
+Camara de Comercio unido de Sopetran</a>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Rol</th>
+
+<td align="left" valign="top" colspan="1">Presidenta Camara de Comercio Unido de Sopetran</td>
+
+</tr>
+
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+
+<td align="left" valign="top">No</td>
+
+</tr>
+
+<tr><th align="left" valign="top">Es cliente</th>
+
+<td align="left" valign="top">S�</td>
+
+</tr>
+
+<tr><th align="left" valign="top">Es usuario</th>
+
+<td align="left" valign="top">S�</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="STK-0002" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">Participante</th>
+
+<th align="left" valign="top" width="100%">
+
+Omar Ortiz Jimenez</th>
+
+</tr>
+
+<tr><th align="left" valign="top">Organizaci�n</th>
+
+<td align="left" valign="top">
+
+<a href="#ORG-0002">
+
+RockStoneStudios (Freelance)</a>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Rol</th>
+
+<td align="left" valign="top" colspan="1">Analista y Desarrollador</td>
+
+</tr>
+
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+
+<td align="left" valign="top">S�</td>
+
+</tr>
+
+<tr><th align="left" valign="top">Es cliente</th>
+
+<td align="left" valign="top">No</td>
+
+</tr>
+
+<tr><th align="left" valign="top">Es usuario</th>
+
+<td align="left" valign="top">No</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="SEC-0004" />
+
+<h1 align="left">8 
+
+DESCRIPCION DEL SISTEMA ACTUAL</h1><a name="PRG-0003" />
+
+<p>Actualmente el municipio no cuenta con una plataforma o aplicativo que muestre su catalogo de servicios para el turista haciendo que el municipio pierda competitividad y haciendo un poco dificil la estadia de las personas que nos visitan</p>
+
+<a name="SEC-0005" />
+
+<h1 align="left">9 
+
+OBJETIVOS</h1><a name="OBJ-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">OBJ-0001</th>
+
+<th align="left" valign="top" width="100%">
+
+Catalogo</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El Sistema debera mostrar los negocios que deseen subscribirse a la app , y mostrar su catalogo de productos y/o servicios que prestan</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Subobjetivos</th>
+
+<td align="left" valign="top">
+
+<ul>
+
+<a name="OBJ-0002" />
+
+<li>
+
+<b>[OBJ-0002] 
+
+Contactos telefonicos</b>:
+
+		
+
+    El sistema deber� 
+
+<em>
+
+El sistema debera mostrar tanto el numero telefonico y whatapp y crear un enlace que me redirija a  dichas aplicaciones de forma rapida</em> <ul>
+
+</ul>
+
+</li>
+
+<a name="OBJ-0003" />
+
+<li>
+
+<b>[OBJ-0003] 
+
+Ubicacion</b>:
+
+		
+
+    El sistema deber� 
+
+<em>
+
+El sistema debera mostrar la ubicacion en google maps de cada negocio</em> <ul>
+
+</ul>
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">alta</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="OBJ-0004" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">OBJ-0004</th>
+
+<th align="left" valign="top" width="100%">
+
+Registro de Usuarios</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El Sistema debera contar con registro y login de usuarios para poder llevar un control de la demanda de la app</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Subobjetivos</th>
+
+<td align="left" valign="top">
+
+<ul>
+
+<a name="OBJ-0005" />
+
+<li>
+
+<b>[OBJ-0005] 
+
+Bonificacion</b>:
+
+		
+
+    El sistema deber� 
+
+<em>
+
+El sistema debera contar con un historial de cada usuario para monitorear las compras que se hagan por medio de las apps y poder darle bonificaciones</em> <ul>
+
+</ul>
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">importante</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">puede esperar</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de verificaci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="SEC-0006" />
+
+<h1 align="left">10 
+
+CATALOGO DE REQUISITOS DEL SISTEMA</h1><a name="SEC-0007" />
+
+<h2 align="left">10.1 
+
+Requisitos de almacenamiento de informacion</h2><a name="IRQ-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">IRQ-0001</th>
+
+<th align="left" valign="top" width="100%" colspan="2">
+
+Negocios</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top" colspan="2">1.0 
+
+			( 11/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="2">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="2">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="2">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td colspan="2">
+
+    El sistema deber� almacenar la informaci�n correspondiente a 
+
+<em>
+
+establecimientos que venden productos y/o servicios  adscritos a la aplicacion.
+
+				</em>
+
+    En concreto:
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Datos espec�ficos</th>
+
+<td colspan="2" align="left" valign="top">
+
+<ul>
+
+<li>
+
+<a name="DAT-0001" />
+
+ID
+
+								(<em>
+
+Identificacion del negocio</em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0002" />
+
+Nombre
+
+								(<em>
+
+Nombre registrado en la DIAN del establecimiento</em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0003" />
+
+Imagen
+
+								(<em>
+
+Imagen del establecimiento</em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0004" />
+
+direccion
+
+								(<em>
+
+Direccion del local y que sera mostrado en google maps </em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0005" />
+
+Tiempo_entrega
+
+								(<em>
+
+Tiempo de entrega promedio de los pedidos </em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0006" />
+
+Oferta
+
+								(<em>
+
+se mostrara si el establecimiento tiene alguna oferta disponible</em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0007" />
+
+Productos
+
+								(<em>
+
+Matriz de productos que ofrece el establecimiento </em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0008" />
+
+Categoria
+
+								(<em>
+
+Cada negocio pertenecera a una categoria ejemplo farmacias,licoreras, legumbrerias etc..</em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0009" />
+
+Telefono
+
+								(<em>
+
+Numero telefonico del establecimiento </em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0010" />
+
+Descripcion
+
+								(<em>
+
+Cada negocio pondra un peque�o parrafo donde hable de su historia o de su emprendimiento</em>)
+
+							</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th rowspan="2" align="left" valign="top">Tiempo de vida</th>
+
+<th align="left" valign="top">Medio</th>
+
+<th align="left" valign="top">M�ximo</th>
+
+</tr>
+
+<tr>
+
+<td>5 
+
+                        a�o(s)</td>
+
+<td>10 
+
+                        a�o(s)</td>
+
+</tr>
+
+<tr>
+
+<th rowspan="2" align="left" valign="top">Ocurrencias simult�neas</th>
+
+<th align="left" valign="top">Medio</th>
+
+<th align="left" valign="top">M�ximo</th>
+
+</tr>
+
+<tr>
+
+<td>200</td>
+
+<td>500</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="2">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="2">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="2">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="2">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="IRQ-0002" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">IRQ-0002</th>
+
+<th align="left" valign="top" width="100%" colspan="2">
+
+Productos</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top" colspan="2">1.0 
+
+			( 12/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="2">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="2">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="2">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td colspan="2">
+
+    El sistema deber� almacenar la informaci�n correspondiente a 
+
+<em>
+
+Articulos que ofrece el establecimiento.
+
+				</em>
+
+    En concreto:
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Datos espec�ficos</th>
+
+<td colspan="2" align="left" valign="top">
+
+<ul>
+
+<li>
+
+<a name="DAT-0011" />
+
+Nombre
+
+								(<em>
+
+Nombre del articulo</em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0012" />
+
+Imagen
+
+								(<em>
+
+Imagen del articulo ofrecido</em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0013" />
+
+Precio
+
+								(<em>
+
+Precio del articulo ofrecido</em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0014" />
+
+Calificacion
+
+								(<em>
+
+Calificacion del producto </em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0015" />
+
+Vistas
+
+								(<em>
+
+Numero de vistas hechas al producto</em>)
+
+							</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th rowspan="2" align="left" valign="top">Tiempo de vida</th>
+
+<th align="left" valign="top">Medio</th>
+
+<th align="left" valign="top">M�ximo</th>
+
+</tr>
+
+<tr>
+
+<td>999 
+
+                        mes(es)</td>
+
+<td>999 
+
+                        mes(es)</td>
+
+</tr>
+
+<tr>
+
+<th rowspan="2" align="left" valign="top">Ocurrencias simult�neas</th>
+
+<th align="left" valign="top">Medio</th>
+
+<th align="left" valign="top">M�ximo</th>
+
+</tr>
+
+<tr>
+
+<td>2500</td>
+
+<td>5000</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="2">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="2">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="2">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="2">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="IRQ-0003" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">IRQ-0003</th>
+
+<th align="left" valign="top" width="100%" colspan="2">
+
+Clientes</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top" colspan="2">1.0 
+
+			( 12/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="2">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="2">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="2">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td colspan="2">
+
+    El sistema deber� almacenar la informaci�n correspondiente a 
+
+<em>
+
+Usuarios finales de la aplicacion.
+
+				</em>
+
+    En concreto:
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Datos espec�ficos</th>
+
+<td colspan="2" align="left" valign="top">
+
+<ul>
+
+<li>
+
+<a name="DAT-0016" />
+
+Nombre
+
+								(<em>
+
+Nombre con la que se registro el usuario</em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0017" />
+
+Contrase�a
+
+								(<em>
+
+Contrase�a</em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0018" />
+
+Historial
+
+								(<em>
+
+Historial de compras del usuario por medio de la app</em>)
+
+							</li>
+
+<li>
+
+<a name="DAT-0019" />
+
+Email
+
+								(<em>
+
+Email del cliente</em>)
+
+							</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th rowspan="2" align="left" valign="top">Tiempo de vida</th>
+
+<th align="left" valign="top">Medio</th>
+
+<th align="left" valign="top">M�ximo</th>
+
+</tr>
+
+<tr>
+
+<td>999 
+
+                        mes(es)</td>
+
+<td>999 
+
+                        mes(es)</td>
+
+</tr>
+
+<tr>
+
+<th rowspan="2" align="left" valign="top">Ocurrencias simult�neas</th>
+
+<th align="left" valign="top">Medio</th>
+
+<th align="left" valign="top">M�ximo</th>
+
+</tr>
+
+<tr>
+
+<td>7500</td>
+
+<td>15000</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="2">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="2">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="2">baja</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="2">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="SEC-0008" />
+
+<h2 align="left">10.2 
+
+Requisitos funcionales</h2><a name="SEC-0009" />
+
+<h3 align="left">10.2.1 
+
+Diagrama casos de uso</h3><a name="SEC-0010" />
+
+<h3 align="left">10.2.2 
+
+Definicion de actores</h3><a name="SEC-0011" />
+
+<h3 align="left">10.2.3 
+
+Casos de uso del sistema</h3><a name="FRQ-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0001</th>
+
+<th align="left" valign="top" width="100%">
+
+Autenticar Usuarios</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 12/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#OBJ-0004" title="Registro de Usuarios">
+
+                                [OBJ-0004] 
+
+Registro de Usuarios</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+Los usuarios deberan identificarse para acceder a cualquier parte del sistema
+
+<br />
+
+<br />
+
+</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">hay presi�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0002" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0002</th>
+
+<th align="left" valign="top" width="100%">
+
+Registro de Usuario</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 13/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#OBJ-0004" title="Registro de Usuarios">
+
+                                [OBJ-0004] 
+
+Registro de Usuarios</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+Para uso del sistema es necesario tener acceso en el mismo por lo cual se le permitira al usuario registrarse proporcionando los siguientes datos :
+
+<br />. Nombre y Apellido
+
+<br />. Email
+
+<br />. Numero de telefono
+
+<br />. Alias
+
+<br />. Password
+
+<br />El email no debe de estar previamente registrado en la <a href="#GLO-0006" title="Base de datos escogida para guardar informacion persistente">DB</a> y el password debe contener minimo 6 caracteres. Al registrarse con exito el usuario podra loguearse
+
+<br />
+
+</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0003" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0003</th>
+
+<th align="left" valign="top" width="100%">
+
+Listar todos los  Negocios</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 13/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#OBJ-0001" title="Catalogo">
+
+                                [OBJ-0001] 
+
+Catalogo</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+En la vista principal se listaran todos los negocios y mostrara la imagen , nombre y calificacion del negocio puesta por lo clientes.
+
+<br />Ademas abra una barra de categorias en la cual se podra filtrar por ellas 
+
+<br />
+
+</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">hay presi�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">baja</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0004" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0004</th>
+
+<th align="left" valign="top" width="100%">
+
+Ingresar al negocio especifico</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 13/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#OBJ-0001" title="Catalogo">
+
+                                [OBJ-0001] 
+
+Catalogo</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El usuario podra visitar la vista de cada negocio en especifico a si como ver sus productos y/o servicios </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0005" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0005</th>
+
+<th align="left" valign="top" width="100%">
+
+Mostrar ubicacion</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 13/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#OBJ-0003" title="Ubicacion">
+
+                                [OBJ-0003] 
+
+Ubicacion</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El cliente podra ver su  ubicacion y del negocio en tiempo real  y su respectiva ruta entre los 2 puntos esto por medio de tecnologias de google maps </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0006" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0006</th>
+
+<th align="left" valign="top" width="100%">
+
+Mostrar productos</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 13/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#OBJ-0001" title="Catalogo">
+
+                                [OBJ-0001] 
+
+Catalogo</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El cliente  podra ver  los productos tanto una foto , como nombre , descripcion o historia , asi como los ingredientes , y darles me gusta </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">importante</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de verificaci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0007" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0007</th>
+
+<th align="left" valign="top" width="100%">
+
+Creacion de enlaces a whatsapp y telefono</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 13/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#OBJ-0002" title="Contactos telefonicos">
+
+                                [OBJ-0002] 
+
+Contactos telefonicos</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+Se agregaran enlaces para redirigir al cliente a whastapp y la aplicacion del telefono </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">hay presi�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de validaci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">alta</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0008" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0008</th>
+
+<th align="left" valign="top" width="100%">
+
+El administrador podra actualizar informacion de negocios</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 23/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El administador podra actualizar nombre,imagen,direccion,numero telefonico, whatsapp , estado (abierto o cerrado) del negocio </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">hay presi�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0009" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0009</th>
+
+<th align="left" valign="top" width="100%">
+
+El administrador podra eliminar negocios</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 23/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El administador podra eliminar toda la informacion de un negocio en especifico </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0010" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0010</th>
+
+<th align="left" valign="top" width="100%">
+
+El administador podra crear un nuevo negocio</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 23/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El administador podra ingresar un nuevo negocio con la informacion solicitada en el formulario : nombre,imagen,direccion,numero telefonico, whatsapp, ubicacion , categoria</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">alta</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0011" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0011</th>
+
+<th align="left" valign="top" width="100%">
+
+El administrador podra ver todos los negocios </th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 23/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El administrador podra ver todos los negocios que se encuentran en la  base de datos </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">importante</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de verificaci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0012" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0012</th>
+
+<th align="left" valign="top" width="100%">
+
+El cliente podra ver el negocio especifico </th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 23/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El cliente podra ingresar a algun negocio especifico y ver toda la informacion tanto del negocio como de los productos y servicios que presta 
+
+<br />
+
+</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">importante</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">validado</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0013" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0013</th>
+
+<th align="left" valign="top" width="100%">
+
+El cliente podra cerrar sesion </th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 23/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El cliente podra cerrar sesion y la memoria del movil borrara el token generado al cliente haber hecho login y se redigirara el cliente a la pantalla de login</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0014" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0014</th>
+
+<th align="left" valign="top" width="100%">
+
+Login de Usuario</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 26/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El usuario debera loguearse con email y password que se verificara si el email existe y el password coincide con la previamente guardada en la base de datos</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">importante</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0015" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0015</th>
+
+<th align="left" valign="top" width="100%">
+
+Carrito de compras</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 26/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+Los usuarios deben visualizar el carrito de compras para confirmar los productos que van a comprar y de ser el caso eliminar o editar la cantidad de los mismo antes de realizar la facturacion</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">importante</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">alta</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="SEC-0012" />
+
+<h2 align="left">10.3 
+
+Requisitos no funcionales</h2><a name="NFR-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">NFR-0001</th>
+
+<th align="left" valign="top" width="100%">
+
+Disponibilidad</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 14/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#OBJ-0001" title="Catalogo">
+
+                                [OBJ-0001] 
+
+Catalogo</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+La aplicacion debera funcionar las 24 horas de los 7 dias de la semana </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">hay presi�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="NFR-0002" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">NFR-0002</th>
+
+<th align="left" valign="top" width="100%">
+
+Rendimiento</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 14/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#OBJ-0001" title="Catalogo">
+
+                                [OBJ-0001] 
+
+Catalogo</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+La app debera tener un excelente rendimiento independientemente de los negocios registrados en la ella </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">alta</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="NFR-0003" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">NFR-0003</th>
+
+<th align="left" valign="top" width="100%">
+
+Compatibilidad</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 14/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El sistema debera funcionar tanto para Android como para IOS</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">hay presi�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">media</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="NFR-0004" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">NFR-0004</th>
+
+<th align="left" valign="top" width="100%">
+
+Mantenimiento</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versi�n</th>
+
+<td align="left" valign="top">1.0 
+
+			( 26/06/2023 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Omar Ortiz Jimenez</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Sandra Rendon</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripci�n</th>
+
+<td align="left" valign="top">
+
+    El sistema deber� 
+
+<em>
+
+El software no se destruye pero se desgasta, por lo tanto algunos apartados deber�n
+
+<br />requerir mantenimiento al cabo del alg�n tiempo</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">importante</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">puede esperar</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de validaci�n</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">baja</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="SEC-0017" />
+
+<h1 align="left">11 
+
+Prototipos</h1></body>
+
+</html>
+
